@@ -105,7 +105,7 @@ install_audio_pipewire() {
     fi
   fi
 
-  pacman_install pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber || warn "PipeWire install issues"
+  pacman_install pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber helvum pipewire-v4l2 pipewire-zeroconf pipewire-roc pipewire-libcamera || warn "PipeWire install issues"
   # enable user wireplumber (pipewire runs in user session)
   systemctl --user enable --now wireplumber 2>/dev/null || true
   systemctl --user restart pipewire pipewire-pulse 2>/dev/null || true
